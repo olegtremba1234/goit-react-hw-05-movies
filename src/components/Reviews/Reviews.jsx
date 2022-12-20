@@ -26,7 +26,7 @@ const Reviews = () => {
     return(
         <>
       {loading && <Loader />}
-      {reviews.length !== 0 && (
+      {reviews.length ? (
         <div>
           <ul>
             {reviews.map(review => (
@@ -37,8 +37,7 @@ const Reviews = () => {
             ))}
           </ul>
         </div>
-      )}
-      {reviews.length === 0 && (
+      ) : (
         <div>We don't have any reviews for this movie</div>
       )}
     </>

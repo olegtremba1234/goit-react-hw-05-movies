@@ -5,8 +5,8 @@ import style from './App.module.css'
 const Home = lazy(() => import('Pages/Home/Home'))
 const Movies = lazy(() => import('Pages/Movies/Movies'))
 const MovieDetails = lazy(() => import('Pages/MovieDetails/MovieDetails'))
-const Cast = lazy(() => import('Pages/Cast/Cast'))
-const Reviews = lazy(() => import('Pages/Reviews/Reviews'))
+const Cast = lazy(() => import('components/Cast/Cast'))
+const Reviews = lazy(() => import('components/Reviews/Reviews'))
 
 export const App = () => {
   return (

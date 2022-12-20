@@ -24,8 +24,9 @@ const Cast = () => {
     }, [movieId])
 
     return (
-        <div>
-          {loading && <Loader />}
+        <>
+        {loading && <Loader />}
+        {cast.length ? <div>
           <ul>
             {cast.map(actor => (
               <li key={actor.id}>
@@ -39,7 +40,10 @@ const Cast = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> : (
+        <div>We don't have any cast for this movie</div>
+        )}
+        </>
       );
 };
 
